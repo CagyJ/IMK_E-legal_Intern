@@ -17,6 +17,7 @@ const Wrapper = styled.div`
   border-radius: 15px;
   max-height: 50px;
   max-width: 80px;
+  color: black;
 `;
 
 const LogoText = styled.p`

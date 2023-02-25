@@ -8,13 +8,16 @@ export default function HeroSection() {
   return (
     <Wrapper>
       <ContentWrapper>
-        <HeadingText>Look and reach beyond limits with Lexi.</HeadingText>
+        <HeadingText>
+          Look and reach beyond limits with <i>Lexi</i>.
+        </HeadingText>
         <SubTitleText>
-          Lexi is an AI chatbot that helps in something. Lexi is an AI chatbot that helps in something. Lexi
-          is an AI chatbot that helps in something. Lexi is an AI chatbot that helps in something. Lexi is an
-          AI chatbot that helps in something. Lexi is an AI chatbot that helps in something.
+          Lexi is a powerful AI Chatbot tool designed to assist individuals and businesses with legal matters. Using advanced natural language
+          processing and machine learning algorithms, the chatbot can understand and respond to a wide range of legal questions and concerns.
         </SubTitleText>
-        <StyledButton width={"150px"} onClick={() => navigate("/setbot")}>Get Started</StyledButton>
+        <StyledButton width={"150px"} onClick={() => navigate("/setbot")}>
+          Get Started
+        </StyledButton>
       </ContentWrapper>
       <ContentWrapper>
         <img src="/illus-1.png" width={"600px"} height={"600px"} alt=" " />

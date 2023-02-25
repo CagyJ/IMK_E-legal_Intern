@@ -5,28 +5,24 @@ export default function DescriptionSection() {
   return (
     <Wrapper>
       <DescriptionCard variant={"first"}>
-        <TitleText>Choose your preferred bot</TitleText>
-        <SubTitleText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        </SubTitleText>
+        <TitleText>Choose your preferred bot style</TitleText>
+        <SubTitleText>With Lexi, you can choose up to three different bot styles of your choice.</SubTitleText>
       </DescriptionCard>
       <DescriptionCard variant={"second"}>
-        <TitleText>Find all legal stuff ...</TitleText>
+        <TitleText>Future plans</TitleText>
         <SubTitleText>
-          {" "}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          <ol>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </ol>
         </SubTitleText>
       </DescriptionCard>
       <DescriptionCard variant={"third"}>
-        <TitleText>About</TitleText>
+        <TitleText>More about Lexi</TitleText>
         <SubTitleText>
-          {" "}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          Our AI chatbot is available 24/7, so you can get the legal help you need at any time of day or night. It is also highly secure and
+          confidential, so you can trust that your information is safe and protected.
         </SubTitleText>
       </DescriptionCard>
     </Wrapper>

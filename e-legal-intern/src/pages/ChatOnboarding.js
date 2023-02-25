@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 import StyledButton from "../components/Button";
 
 export default function ChatOnboarding() {
-  const [selected, setSelected] = useState(0)
-  const navigate = useNavigate()
+  const [selected, setSelected] = useState(0);
+  const navigate = useNavigate();
 
   return (
     <Wrapper>
@@ -25,13 +25,14 @@ export default function ChatOnboarding() {
         </CenterBox>
       </ContentWrapper>
       <SubTitleText>Choose a Lexi style of your choice to continue</SubTitleText>
-      <StyledButton onClick={() => navigate("/chat") }>Continue</StyledButton>
+      <StyledButton onClick={() => navigate("/chat")}>Continue</StyledButton>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
   display: flex;
+  color: black;
   flex-direction: column;
   gap: 50px;
   align-items: center;

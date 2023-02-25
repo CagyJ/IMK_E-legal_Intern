@@ -5,6 +5,9 @@ export default function DescriptionCard({ variant, children }) {
 }
 
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   padding: 25px;
   width: 100%;
   background-color: white;
@@ -12,23 +15,14 @@ const Wrapper = styled.div`
   min-height: 300px;
   backdrop-filter: blur(100px);
   transition: all 0.3s ease-in-out;
+  color: black;
 
   &.first {
-    background: linear-gradient(
-      150deg,
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 1),
-      rgba(234, 235, 255, 1)
-    );
+    background: linear-gradient(150deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(234, 235, 255, 1));
   }
 
   &.second {
-    background: linear-gradient(
-      195deg,
-      rgba(255, 255, 255, 1),
-      rgba(255, 255, 255, 1),
-      rgba(253, 226, 253, 1)
-    );
+    background: linear-gradient(195deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(253, 226, 253, 1));
   }
 
   &.third {
