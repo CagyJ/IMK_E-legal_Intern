@@ -1,26 +1,26 @@
 import styled from "styled-components";
 import ChatAvatar from "../components/ChatAvatar";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import StyledButton from "../components/Button";
+import { useAppContext } from "../context/AppContext";
 
 export default function ChatOnboarding() {
-  const [selected, setSelected] = useState(0);
+  const { setStyleColor, botStyle } = useAppContext();
   const navigate = useNavigate();
 
   return (
     <Wrapper>
       <ContentWrapper>
         <CenterBox>
-          <ChatAvatar variant={"red"} selected={selected === 0} onClick={() => setSelected(0)} />
+          <ChatAvatar variant={"red"} selected={botStyle === 0} onClick={() => setStyleColor(0)} />
           <SubTitleText>Red</SubTitleText>
         </CenterBox>
         <CenterBox>
-          <ChatAvatar variant={"green"} selected={selected === 1} onClick={() => setSelected(1)} />
+          <ChatAvatar variant={"green"} selected={botStyle === 1} onClick={() => setStyleColor(1)} />
           <SubTitleText>Green</SubTitleText>
         </CenterBox>
         <CenterBox>
-          <ChatAvatar variant={"purple"} selected={selected === 2} onClick={() => setSelected(2)} />
+          <ChatAvatar variant={"purple"} selected={botStyle === 2} onClick={() => setStyleColor(2)} />
           <SubTitleText>Purple</SubTitleText>
         </CenterBox>
       </ContentWrapper>
