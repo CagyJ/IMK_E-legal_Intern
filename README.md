@@ -3,10 +3,14 @@
 
 # Front-end
 
-
-- useContext to handle the style of the theme
-- local storage for the chat history
+## Features
+- Modern Vibe All the Way Around 💖
+- Customizable Bot 🤖
 - 
+
+## Previews
+
+
 # Artificial Intelligence part
 ## Data scraping
 We use https://njt.hu/ for scraping. We scraped the Well-known legislation(all the pages). We extract law published  from 1950 to 2010.

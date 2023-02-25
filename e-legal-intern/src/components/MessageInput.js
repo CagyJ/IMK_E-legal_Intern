@@ -1,7 +1,7 @@
 import React from 'react';
 import StyledButton from './Button';
 
-const MessageInput = ({question, setQuestion, addQs}) => {
+const MessageInput = ({question, setQuestion, addQs, chatContent, setWarning}) => {
 
     return (
         <div className="msg-input gap-2">
@@ -16,6 +16,10 @@ const MessageInput = ({question, setQuestion, addQs}) => {
             />
             <StyledButton width={"150px"} className="btn gap-2 ml-5"
                 onClick={() => {
+                    if (chatContent.length % 2 === 0) {
+                        setWarning(true)
+                        return
+                    }
                     addQs()
                     console.log(question+"Send")
                     setQuestion("")
