@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export default function StyledButton({ children, className, onClick, width }) {
+export default function StyledButton({ children, className, onClick, width, disabled }) {
   return (
-    <Wrapper className={className} onClick={onClick} width={width}>
+    <Wrapper className={className} onClick={onClick} width={width} disabled={disabled}>
       {children}
     </Wrapper>
   );
@@ -22,5 +22,9 @@ const Wrapper = styled.button`
 
   :active {
     transform: scale(0.98);
+  }
+
+  :disabled {
+    background-color: gray;
   }
 `;
