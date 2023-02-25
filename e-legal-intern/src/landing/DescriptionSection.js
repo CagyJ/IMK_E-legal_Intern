@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import DescriptionCard from "../cards/DescriptionCard";
+import DescriptionCard from "../components//DescriptionCard";
 
 export default function DescriptionSection() {
   return (

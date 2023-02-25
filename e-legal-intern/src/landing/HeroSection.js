@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import StyledButton from "../buttons/Button";
+import StyledButton from "../components/Button";
 
 export default function HeroSection() {
+  const navigate = useNavigate();
+
   return (
     <Wrapper>
       <ContentWrapper>
@@ -11,7 +14,7 @@ export default function HeroSection() {
           is an AI chatbot that helps in something. Lexi is an AI chatbot that helps in something. Lexi is an
           AI chatbot that helps in something. Lexi is an AI chatbot that helps in something.
         </SubTitleText>
-        <StyledButton width={"150px"}>Get Started</StyledButton>
+        <StyledButton width={"150px"} onClick={() => navigate("/setbot")}>Get Started</StyledButton>
       </ContentWrapper>
       <ContentWrapper>
         <img src="/illus-1.png" width={"600px"} height={"600px"} alt=" " />

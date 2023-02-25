@@ -1,10 +1,13 @@
 import styled from "styled-components";
-import ChatAvatar from "./ChatAvatar";
+import ChatAvatar from "../components/ChatAvatar";
 import { useState } from "react";
-import StyledButton from "../buttons/Button";
+import { useNavigate } from "react-router-dom";
+import StyledButton from "../components/Button";
 
 export default function ChatOnboarding() {
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState(0)
+  const navigate = useNavigate()
+
   return (
     <Wrapper>
       <ContentWrapper>
@@ -22,7 +25,7 @@ export default function ChatOnboarding() {
         </CenterBox>
       </ContentWrapper>
       <SubTitleText>Choose a Lexi style of your choice to continue</SubTitleText>
-      <StyledButton>Continue</StyledButton>
+      <StyledButton onClick={() => navigate("/chat") }>Continue</StyledButton>
     </Wrapper>
   );
 }

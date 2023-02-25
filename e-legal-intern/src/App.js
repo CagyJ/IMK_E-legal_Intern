@@ -1,33 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-import styled from "styled-components";
-import HeroSection from "./landing/HeroSection";
-import Header from "./layout/Header";
-import DescriptionSection from "./landing/DescriptionSection";
-import Footer from "./layout/Footer";
-import ChatOnboarding from "./views/ChatOnboarding";
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import ChatBox from './pages/ChatBox';
+import Landing from './pages/Landing';
+import ChatOnboarding from './pages/ChatOnboarding';
 
 function App() {
   return (
-    <Wrapper>
-      <Header />
-      <HeroSection />
-      <DescriptionSection />
-      <Footer />
-      {/* TO BE MOVED TO /chat page */}
-      <ChatOnboarding />
-    </Wrapper>
+    <Router>
+      <Routes>
+        <Route path="/" exact element={<Landing />} />
+        <Route path="/setbot" exact element={<ChatOnboarding />} />
+        <Route path="/chat" exact element={<ChatBox />} />
+      </Routes>
+    </Router>
   );
 }
-
-const Wrapper = styled.div`
-  background-color: #f1f1f1;
-  padding: 20px;
-  min-height: 95vh;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  justify-content: space-around;
-`;
 
 export default App;
