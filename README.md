@@ -31,3 +31,7 @@ The parameters;
 5. save_steps=8192
 6. eval_steps=4096
 7. save_total_limit=1
+
+# Future 
+
+1. Having an updated dataset for training is very important for the model quality and results. we are planning to deploy the model on Cloud ( AWS, Azure, ..) and implement a celery task for scraping the website to have new data and train the model on the new year laws 
