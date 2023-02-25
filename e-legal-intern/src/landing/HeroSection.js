@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button } from "@nextui-org/react";
+import StyledButton from "../buttons/Button";
 
 export default function HeroSection() {
   return (
@@ -11,7 +11,7 @@ export default function HeroSection() {
           is an AI chatbot that helps in something. Lexi is an AI chatbot that helps in something. Lexi is an
           AI chatbot that helps in something. Lexi is an AI chatbot that helps in something.
         </SubTitleText>
-        <StyledButton>Get Started</StyledButton>
+        <StyledButton width={"150px"}>Get Started</StyledButton>
       </ContentWrapper>
       <ContentWrapper>
         <img src="/illus-1.png" width={"600px"} height={"600px"} alt=" " />
@@ -37,20 +37,13 @@ const ContentWrapper = styled.div`
 const HeadingText = styled.h1`
   font-size: 80px;
   font-weight: 600;
+  color: black;
   line-height: 1;
 `;
 
 const SubTitleText = styled.p`
   font-size: 18px;
+  color: black;
   font-weight: 300;
   line-height: 1.4;
-`;
-
-const StyledButton = styled(Button)`
-  background-color: black;
-  color: white;
-  height: 45px;
-  width: 200px;
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 `;

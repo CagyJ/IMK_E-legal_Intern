@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { Button } from "@nextui-org/react";
 import ChatAvatar from "./ChatAvatar";
 import { useState } from "react";
+import StyledButton from "../buttons/Button";
 
 export default function ChatOnboarding() {
   const [selected, setSelected] = useState(0);
@@ -42,6 +42,7 @@ const Wrapper = styled.div`
 
 const CenterBox = styled.div`
   display: flex;
+  gap: 15px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -56,14 +57,4 @@ const SubTitleText = styled.p`
   font-size: 18px;
   font-weight: 300;
   line-height: 1.4;
-`;
-
-const StyledButton = styled(Button)`
-  background-color: black;
-  color: white;
-  height: 45px;
-  border-radius: 15px;
-  :hover {
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-  }
 `;

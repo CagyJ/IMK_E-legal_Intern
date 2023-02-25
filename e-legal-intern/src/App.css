@@ -4,6 +4,7 @@
 * {
   box-sizing: border-box;
   font-family: 'Varela Round', Poppins, Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
 }
 .App {
   text-align: center;
