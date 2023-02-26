@@ -1,5 +1,8 @@
 # IMK_E-legal_Intern
 
+Introduction Video: 
+
+[![intro](http://img.youtube.com/vi/jvtoWKolU2U/0.jpg)](http://www.youtube.com/watch?v=jvtoWKolU2U "intro")
 
 # Front-end
 
