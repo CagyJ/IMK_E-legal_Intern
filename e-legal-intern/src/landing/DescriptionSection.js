@@ -12,9 +12,10 @@ export default function DescriptionSection() {
         <TitleText>Future plans</TitleText>
         <SubTitleText>
           <ol>
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
+            <li>🌟 More accurate answers</li>
+            <li>🏢 Cooperate with local organizations</li>
+            <li>🔒 Get certified from authorities</li>
+            <li>👉 ...</li>
           </ol>
         </SubTitleText>
       </DescriptionCard>

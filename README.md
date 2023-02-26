@@ -11,6 +11,22 @@
 ## Previews
 
 
+## To Run
+- clone the repo and ship into the project folder
+- create `.env` file under `e-legal-intern` folder with the content:
+  ```
+    REACT_APP_OPENAI_API_KEY=your-key
+  ```
+- run `npm install`
+- run `npm start`
+
+
+## Next...
+- Export to PDF of Chat History
+- Integrate with the real engine instead of OpenAI
+- Get accurate answers from the engine
+- Deploy to the cloud
+
 # Artificial Intelligence part
 ## Data scraping
 We use https://njt.hu/ for scraping. We scraped the Well-known legislation(all the pages). We extract law published  from 1950 to 2010.

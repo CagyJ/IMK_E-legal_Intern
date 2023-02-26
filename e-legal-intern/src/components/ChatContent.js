@@ -1,11 +1,18 @@
+import React from "react";
 import styled from "styled-components";
 import { useAppContext } from "../context/AppContext";
 
 const ChatContent = ({ content, isTyping }) => {
   const { botStyle } = useAppContext();
+  const messagesEndRef = React.useRef(null);
+  
+  const scrollToBottom = () => {
+    messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+  React.useEffect(scrollToBottom, [content]);
 
   return (
-    <Wrapper>
+    <Wrapper className="content">
       {content.map((con, idx) => {
         if (idx % 2 === 0) {
           return (
@@ -27,7 +34,8 @@ const ChatContent = ({ content, isTyping }) => {
           );
         }
       })}
-      {isTyping && <TypingIndicatorWrapper>Lexi is typing ...</TypingIndicatorWrapper>}
+      {isTyping && <TypingIndicatorWrapper className="text-slate-400">Lexi is typing ...</TypingIndicatorWrapper>}
+      <div ref={messagesEndRef} />
     </Wrapper>
   );
 };

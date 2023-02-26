@@ -3,30 +3,26 @@ import MessageInput from "../components/MessageInput";
 import ChatContent from "../components/ChatContent";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import { query } from "../utils/openai";
+import { useLocalStorageState } from "../utils/hooks";
 
 const ChatBox = () => {
   const [qs, setQs] = React.useState("");
   const [warning, setWarning] = React.useState(false);
-  const [chatContent, setChatContent] = React.useState(() => ["Hi, there!", "Hello, whatsup!", "Good, whatsup!"]);
+  const [chatContent, setChatContent] = useLocalStorageState('ChatHistory', ["Hi, there!", "Hello, whatsup!", "Good, whatsup!"]);
   const [isTyping, setIsTyping] = React.useState(false);
   const navigate = useNavigate();
-
-  const getAns = (qs) => {
-    console.log(qs);
-    return "Good question, don't know yet!";
-  };
-
-  const addQs = () => {
-    const newChatContent = [...chatContent, qs];
-    setChatContent(newChatContent);
-    setIsTyping(true);
-    setTimeout(() => {
-      const ans = getAns(qs);
-      setChatContent([...newChatContent, ans]);
-      setWarning(false);
-      setIsTyping(false);
-    }, 2000);
-  };
+    const addQs = async () => {
+        const newChatContent = [...chatContent, qs]
+        setChatContent(newChatContent)
+        setIsTyping(true);
+        const ans = await query({
+            prompt: qs
+        })
+        setChatContent([...newChatContent, ans])
+        setWarning(false)
+        setIsTyping(false);
+    }
 
   return (
     <Wrapper>
