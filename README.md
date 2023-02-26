@@ -6,10 +6,10 @@
 ## Features
 - Modern Vibe All the Way Around 💖
 - Customizable Bot 🤖
-- 
+- Auto-Save Your Chat Locally 🔐
 
 ## Previews
-
+![preview](Previews/pre.gif)
 
 ## To Run
 - clone the repo and ship into the project folder
